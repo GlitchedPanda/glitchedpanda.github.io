@@ -1,0 +1,46 @@
+.navbar-dark {
+    background-color: #15171a;
+}
+
+.bg-dark-c {
+    background-color: #16191b;
+}
+
+.btn-primary {
+    background-color: #2f4ba700;
+    color: #2f4ba7;
+    border-color: #2f4eb6;
+    font-weight: bold;
+    animation-delay: 0.25s;
+}
+
+.btn-primary:hover {
+    color: #2a4396;
+    background-color: #2f4ba73a;
+    border-color: #2a4396;
+}
+
+.blue-gradient-text {
+    background-color: #2f4ba7;
+    background-image: linear-gradient(85deg, #2f4ca7, #1e2869);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.blue-text-hover {
+    color: white;
+    animation-delay: 0.25s;
+}
+
+.blue-text-hover:hover {
+    color: #2f4ba7;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

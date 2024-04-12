@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GlitchedPanda</title>
-    <link rel="stylesheet" href="assets/css/bootstrap-colors.css">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="shortcut icon" href="assets/images/logo.gif" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/logo.gif">
+    <link rel="icon" href="/assets/images/logo.gif">
   </head>
-  <body>
-    
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <body class="bg-dark-c text-white"> 
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="assets/images/logo.gif" alt="Logo" style="width:40px;"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -25,13 +28,16 @@
 
           <ul class="navbar-nav d-flex">
             <li class="nav-item p-1">
-              <button class="btn btn-primary" type="button">1</button>
+              <a class="nav-link blue-text-hover" href="/"><span class="blue-gradient-text">01.</span> Home</a>
             </li>
             <li class="nav-item p-1">
-              <button class="btn btn-primary" type="button">2</button>
+              <a class="nav-link blue-text-hover" href="/"><span class="blue-gradient-text">02.</span> Projects</a>
             </li>
             <li class="nav-item p-1">
-              <button class="btn btn-primary" type="button">3</button>
+              <a class="nav-link blue-text-hover" href="https://github.com/GlitchedPanda" target="_blank"><span class="blue-gradient-text">03.</span> GitHub</a>
+            </li>
+            <li class="nav-item p-1">
+              <button class="btn btn-primary" type="button">Something</button>
             </li>
           </ul>
     
@@ -39,5 +45,10 @@
       </div>
     </nav>
 
+    <div class="container-fluid mt-3">
+      <br><br>
+      <h3>Hello!</h1>
+      <p>I'm <strong class="blue-gradient-text">Glitched Panda</strong> and i'm a developer</p>
+    </div>
   </body>
 </html>
