@@ -61,7 +61,8 @@
     align-items: center;
     padding: 0.45rem 0.85rem;
     border-radius: 999px;
-    background: rgba(47, 75, 167, 0.18);
+    background: rgba(47, 75, 167, 0.24);
+    border: 1px solid rgba(47,75,167,0.85);
     color: #dfe7ff;
     font-size: 0.88rem;
     font-weight: 600;
@@ -92,6 +93,7 @@
     border-color: rgba(47,75,167,0.36);
     padding: 1rem;
     border-radius: 0.9rem;
+    background: rgba(20, 24, 29, 0.92);
 }
 
 #projects-grid .project-card .card-body {
@@ -123,7 +125,16 @@
 
 .project-card-text {
     font-size: 0.98rem;
-    color: #e6ecff;
+    color: #f4f7ff;
+}
+
+.subtle-text {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.project-meta {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .rust-icon {
@@ -224,12 +235,12 @@
 }
 
 .project-card-text {
-    color: #c7d0f0;
+    color: #ffffff;
 }
 
 .project-meta {
     font-size: 0.92rem;
-    color: #98a6ce;
+    color: rgba(255,255,255,0.75);
 }
 
 /* Projects page loader: center in a taller area, larger, and white */
@@ -250,6 +261,55 @@
 #projects-status span {
     color: #ffffff;
     font-size: 1rem;
+}
+
+#projects-hero {
+    background: rgba(20, 24, 29, 0.92);
+    border: 2px solid rgba(47,75,167,0.36) !important;
+    border-radius: 0.9rem;
+    box-shadow: 0 18px 34px rgba(0,0,0,0.2);
+}
+
+#projects-hero h2,
+#projects-hero .subtle-text,
+#projects-hero .text-muted {
+    color: #ffffff;
+}
+
+#projects-hero .text-muted {
+    opacity: 1;
+}
+
+.project-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(47, 75, 167, 0.24);
+    border: 1px solid rgba(47,75,167,0.85);
+    color: #dce2ff;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.project-card-title a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-card-title a:hover {
+    color: #82b8ff;
+    text-decoration: underline;
+}
+
+.project-card-footer a.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card-footer a.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(47,75,167,0.18);
 }
 
 .navbar {

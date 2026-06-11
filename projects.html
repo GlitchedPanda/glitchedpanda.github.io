@@ -57,9 +57,24 @@
         <div class="col-12 col-xl-10">
           <div class="d-flex flex-column flex-md-row align-items-start justify-content-between mb-4 gap-3">
             <div>
-              <p class="text-muted mb-1">Latest work</p>
               <h1 class="fw-bold">Projects</h1>
             </div>
+          </div>
+
+          <div id="projects-hero" class="card bg-dark-c border border-2 border-primary p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row align-items-start justify-content-between gap-3">
+              <div>
+                <p class="subtle-text mb-1">Live GitHub repos</p>
+                <h2 class="fw-bold mb-2">Projects sorted by star count.</h2>
+                <p class="subtle-text mb-0">This page pulls my public repositories from GitHub and shows the most active work first.</p>
+              </div>
+              <div class="d-flex flex-wrap gap-2 align-items-center">
+                <span class="project-pill">Star-sorted</span>
+                <span class="project-pill">Open source</span>
+                <span class="project-pill">Systems work</span>
+              </div>
+            </div>
+            <div id="project-stats" class="mt-4 subtle-text">Loading project stats…</div>
           </div>
 
           <div id="projects-grid" class="row g-4"></div>

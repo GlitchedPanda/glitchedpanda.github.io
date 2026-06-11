@@ -1,6 +1,20 @@
 const username = 'GlitchedPanda';
 const grid = document.getElementById('projects-grid');
 const status = document.getElementById('projects-status');
+const summary = document.getElementById('project-stats');
+
+function getTopLanguages(repos) {
+  const counts = repos.reduce((acc, repo) => {
+    if (!repo.language) return acc;
+    acc[repo.language] = (acc[repo.language] || 0) + 1;
+    return acc;
+  }, {});
+  return Object.entries(counts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 3)
+    .map(([lang, count]) => `${lang} (${count})`)
+    .join(', ');
+}
 
 function showStatus(text, withSpinner = false) {
   status.classList.remove('d-none');
@@ -43,7 +57,7 @@ function createProjectCard(repo) {
   meta.textContent = `${starText}${langText}${updatedText}`;
 
   const footer = document.createElement('div');
-  footer.className = 'd-flex flex-wrap gap-2';
+  footer.className = 'd-flex flex-wrap gap-2 project-card-footer';
 
   const sourceBtn = document.createElement('a');
   sourceBtn.className = 'btn btn-outline-primary btn-sm';
@@ -89,6 +103,12 @@ async function loadProjects() {
     }
 
     repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+    const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+    const topLanguages = getTopLanguages(repos);
+    if (summary) {
+      summary.textContent = `${repos.length} repos loaded · ${totalStars.toLocaleString()} stars total${topLanguages ? ` · Top languages: ${topLanguages}` : ''}`;
+    }
 
     repos.forEach(repo => grid.appendChild(createProjectCard(repo)));
     status.classList.add('d-none');
