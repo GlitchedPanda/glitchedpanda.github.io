@@ -39,6 +39,271 @@
     -moz-text-fill-color: transparent;
 }
 
+.project-card {
+    background: rgba(20, 24, 29, 0.92);
+    border: 1px solid rgba(47, 75, 167, 0.22);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #2f4ba7;
+    box-shadow: 0 28px 60px rgba(47, 75, 167, 0.22);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(47, 75, 167, 0.18);
+    color: #dfe7ff;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.tech-card .tech-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.tech-card .tech-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Projects view: stronger, larger card presentation */
+#projects-grid .project-card {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(47,75,167,0.36);
+    padding: 1rem;
+    border-radius: 0.9rem;
+}
+
+#projects-grid .project-card .card-body {
+    padding: 1.25rem;
+}
+
+#projects-grid .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 90px rgba(47,75,167,0.24);
+}
+
+/* Main page tech cards: wider borders and bolder look */
+.tech-card {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(47,75,167,0.32);
+    padding: 0.9rem;
+    border-radius: 0.9rem;
+}
+
+.tech-card .card-body {
+    padding: 1rem 0.75rem;
+}
+
+.project-card-title {
+    font-weight: 700;
+    font-size: 1.03rem;
+}
+
+.project-card-text {
+    font-size: 0.98rem;
+    color: #e6ecff;
+}
+
+.rust-icon {
+    background: linear-gradient(145deg, #dea123, #a35318);
+    color: #151515;
+}
+
+.cpp-icon {
+    background: linear-gradient(145deg, #1b4cc0, #2e7bf0);
+    color: #fff;
+}
+
+.py-icon {
+    /* stronger contrast: dark blue to bright teal for clear gradient */
+    background: linear-gradient(145deg, #04283e, #0b7ea8);
+    color: #ffffff;
+}
+
+.arch-icon {
+    background: linear-gradient(145deg, #1793d1, #1a5bab);
+    color: #fff;
+}
+
+.nvim-icon {
+    /* stronger contrast: deep green to vivid green for clearer gradient */
+    background: linear-gradient(145deg, #062f14, #1d9443);
+    color: #ffffff;
+}
+
+.git-icon {
+    background: linear-gradient(145deg, #f14c29, #a02f19);
+    color: #fff;
+}
+
+.project-card-title {
+    color: #dce2ff;
+}
+
+.subtle-text {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.discord-user {
+    color: #74a7ff;
+}
+
+/* Copyable code block styling for Discord username */
+.copy-code {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 0.28rem 0.6rem;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.copy-code code {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: inherit;
+}
+
+.copy-tooltip {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: rgba(20,24,29,0.96);
+    color: #c9ddff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.14s ease, transform 0.14s ease;
+    pointer-events: none;
+    white-space: normal;
+    text-align: center;
+    width: auto;
+}
+
+.copy-code:hover .copy-tooltip,
+.copy-code.show-tooltip .copy-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.copy-code.copied {
+    border-color: rgba(116,167,255,0.55);
+    background: rgba(116,167,255,0.04);
+}
+
+.project-card-text {
+    color: #c7d0f0;
+}
+
+.project-meta {
+    font-size: 0.92rem;
+    color: #98a6ce;
+}
+
+/* Projects page loader: center in a taller area, larger, and white */
+#projects-status {
+    min-height: 38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects-status .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.35rem;
+    color: #ffffff; /* makes the spinner white */
+}
+
+#projects-status span {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(21, 23, 26, 0.97);
+        border-radius: 0 0 1rem 1rem;
+        padding: 0.75rem 1rem 1rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+        max-height: calc(100vh - 5.5rem);
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-collapse.show {
+        display: block !important;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav .btn {
+        width: 100%;
+    }
+
+    .navbar-brand img {
+        width: 34px;
+    }
+}
+
 .blue-text-hover {
     color: white;
     animation-delay: 0.25s;
